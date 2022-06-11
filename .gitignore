@@ -21,9 +21,12 @@ build
 eclipse
 run
 
+#assets
+/src/generated
+/src/main/resources
+
 # Files from Forge MDK
 forge*changelog.txt
 /src/generated/resources/.cache/cache
 /changelog.txt
 /CREDITS.txt
-/src/generated/resources/assets/examplemod/lang/en_us.json

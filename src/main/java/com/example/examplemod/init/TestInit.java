@@ -2,18 +2,13 @@ package com.example.examplemod.init;
 
 import com.example.examplemod.generation.annotations.ItemModelGen;
 import com.example.examplemod.generation.annotations.LanguageDataKey;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class TestInit {
     public static final DeferredRegister<Item> TEST = DeferredRegister.create(ForgeRegistries.ITEMS, "examplemod");
-    public static final DeferredRegister<Block> BLOCK = DeferredRegister.create(ForgeRegistries.BLOCKS, "examplemod");
 
     @ItemModelGen(registryName = "examplemod:examplemod", type = ItemModelGen.ModelType.ITEM_GENERATED, textureLoc = "item/test")
     @LanguageDataKey(key = "item.examplemod.examplemod", translation = "test item")

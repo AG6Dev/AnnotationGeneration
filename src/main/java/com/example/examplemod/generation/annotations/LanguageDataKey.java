@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface LanguageDataKey {
-    String key() default "";
+    String key();
 
     String translation() default "";
 }

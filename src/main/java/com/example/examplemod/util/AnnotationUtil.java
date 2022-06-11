@@ -11,8 +11,6 @@ public final class AnnotationUtil {
     }
 
     public static Set<Field> getFieldsInClassesWithAnnotation(Set<Class<?>> classesToSearch, Class<? extends Annotation> annotation) {
-        //final Map<Class<?>, Set<Field>> classMap = new HashMap<>();
-
         final Set<Field> fields = new HashSet<>();
         classesToSearch.forEach(aClass -> {
 
@@ -21,10 +19,8 @@ public final class AnnotationUtil {
                     fields.add(field);
                 }
             }
-           // classMap.put(aClass, fields);
         });
         return fields;
-        //return classMap;
     }
 
     public static Set<Field> getFindFieldsWithAnnotation(Class<?> _class, Class<? extends Annotation> annotationClass) {
