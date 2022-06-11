@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Set;
 
 public class AnnotationGeneration {
-    public static AnnotationGeneration INSTANCE = null;
+    private static AnnotationGeneration INSTANCE = null;
     public final String modid;
     public final Set<Class<?>> classesToSearch;
 
@@ -12,6 +12,10 @@ public class AnnotationGeneration {
         INSTANCE = this;
         this.modid = modid;
         this.classesToSearch = classesToSearch;
+    }
+
+    public AnnotationGeneration(String modid, Class<?>... classes) {
+        this(modid, Set.of(classes));
     }
 
 

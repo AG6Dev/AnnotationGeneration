@@ -18,9 +18,9 @@ public class AnnotationLanguageProvider extends LanguageProvider {
 
         final var fieldsWithAnno = AnnotationUtil.getFieldsInClassesWithAnnotation(AnnotationGeneration.getInstance().classesToSearch, LanguageDataKey.class);
 
-        fieldsWithAnno.forEach((aClass, fields) -> fields.forEach(field -> {
+        fieldsWithAnno.forEach(field -> {
             final var fieldAnnotation = field.getAnnotation(LanguageDataKey.class);
             add(fieldAnnotation.key(), fieldAnnotation.translation());
-        }));
+        });
     }
 }

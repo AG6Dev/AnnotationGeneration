@@ -15,6 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 import java.util.Set;
@@ -25,7 +26,10 @@ public class ExampleMod {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public ExampleMod() {
-        AnnotationGeneration gen = new AnnotationGeneration("examplemod", Set.of(TestInit.class));
+        AnnotationGeneration gen = new AnnotationGeneration("examplemod", TestInit.class);
+
+        TestInit.TEST.register(FMLJavaModLoadingContext.get().getModEventBus());
+        TestInit.BLOCK.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }

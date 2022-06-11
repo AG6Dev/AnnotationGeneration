@@ -1,5 +1,6 @@
 package com.example.examplemod.generation;
 
+import com.example.examplemod.generation.provider.AnnotationItemModelProvider;
 import com.example.examplemod.generation.provider.AnnotationLanguageProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,5 +17,6 @@ public class GenerationEvents {
         LoggerFactory.getLogger(AnnotationGeneration.class).debug("Starting Data Generation for mod: {}", AnnotationGeneration.getInstance().modid);
 
         generator.addProvider(new AnnotationLanguageProvider(generator, "en_us"));
+        generator.addProvider(new AnnotationItemModelProvider(generator, existingFileHelper));
     }
  }
