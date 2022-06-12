@@ -13,8 +13,6 @@ public class AnnotationLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        AnnotationGeneration.LOGGER.debug("Starting language data generation for modid {}", AnnotationGeneration.getInstance().modid);
-
         final var fieldsWithAnno = AnnotationUtil.getFieldsInClassesWithAnnotation(AnnotationGeneration.getInstance().classesToSearch, LanguageDataKey.class);
 
         fieldsWithAnno.forEach(field -> {

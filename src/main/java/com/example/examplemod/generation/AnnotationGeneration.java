@@ -11,8 +11,6 @@ public class AnnotationGeneration {
     public final String modid;
     public final Set<Class<?>> classesToSearch;
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(getInstance().modid);
-
     public AnnotationGeneration(String modid, Set<Class<?>> classesToSearch) {
         INSTANCE = this;
         this.modid = modid;

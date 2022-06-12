@@ -14,8 +14,6 @@ public class AnnotationItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        AnnotationGeneration.LOGGER.debug("Starting item model generation for modid {}", AnnotationGeneration.getInstance().modid);
-
         final var fields = AnnotationUtil.getFieldsInClassesWithAnnotation(AnnotationGeneration.getInstance().classesToSearch, ItemModelGen.class);
         fields.forEach(field -> {
             final var fieldAnno = field.getAnnotation(ItemModelGen.class);
