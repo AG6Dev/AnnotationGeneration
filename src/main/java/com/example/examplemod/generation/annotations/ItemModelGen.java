@@ -10,17 +10,18 @@ import java.lang.annotation.Target;
 public @interface ItemModelGen {
 
     /**
-     *  The registry name of the item
+     * The registry name of the item
      */
     String registryName();
 
     /**
-     *  Type of model to be generated
+     * Type of model to be generated
      */
     ModelType type();
 
-    /**  Location of the texture {@code item/texturename}
-     *  <br> Starts from the {@code assets/modid} directory  </br>
+    /**
+     * Location of the texture {@code item/texturename}
+     * <br> Starts from the {@code assets/modid} directory  </br>
      */
     String textureLoc() default "";
 

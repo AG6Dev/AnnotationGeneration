@@ -2,7 +2,9 @@ package com.example.examplemod.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public final class AnnotationUtil {
@@ -14,8 +16,8 @@ public final class AnnotationUtil {
         final Set<Field> fields = new HashSet<>();
         classesToSearch.forEach(aClass -> {
 
-            for(Field field : aClass.getFields()) {
-                if(field.getAnnotation(annotation) != null) {
+            for (Field field : aClass.getFields()) {
+                if (field.getAnnotation(annotation) != null) {
                     fields.add(field);
                 }
             }

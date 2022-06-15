@@ -1,5 +1,6 @@
 package com.example.examplemod.generation;
 
+import com.example.examplemod.generation.provider.AnnotationBlockModelProvider;
 import com.example.examplemod.generation.provider.AnnotationItemModelProvider;
 import com.example.examplemod.generation.provider.AnnotationLanguageProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,5 +16,6 @@ public class GenerationEvents {
 
         generator.addProvider(new AnnotationLanguageProvider(generator, "en_us"));
         generator.addProvider(new AnnotationItemModelProvider(generator, existingFileHelper));
+        generator.addProvider(new AnnotationBlockModelProvider(generator, existingFileHelper));
     }
 }

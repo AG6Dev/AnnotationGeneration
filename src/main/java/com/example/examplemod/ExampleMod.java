@@ -16,7 +16,7 @@ public class ExampleMod {
         AnnotationGeneration gen = new AnnotationGeneration("examplemod", TestInit.class);
 
         TestInit.TEST.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        TestInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
