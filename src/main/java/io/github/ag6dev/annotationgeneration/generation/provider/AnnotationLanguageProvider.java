@@ -1,8 +1,8 @@
-package com.example.examplemod.generation.provider;
+package io.github.ag6dev.annotationgeneration.generation.provider;
 
-import com.example.examplemod.generation.AnnotationGeneration;
-import com.example.examplemod.generation.annotations.LanguageDataKey;
-import com.example.examplemod.util.AnnotationUtil;
+import io.github.ag6dev.annotationgeneration.generation.AnnotationGeneration;
+import io.github.ag6dev.annotationgeneration.generation.annotations.LanguageDataKey;
+import io.github.ag6dev.annotationgeneration.util.AnnotationUtil;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 

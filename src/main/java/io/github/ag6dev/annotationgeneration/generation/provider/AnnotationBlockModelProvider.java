@@ -1,8 +1,8 @@
-package com.example.examplemod.generation.provider;
+package io.github.ag6dev.annotationgeneration.generation.provider;
 
-import com.example.examplemod.generation.AnnotationGeneration;
-import com.example.examplemod.generation.annotations.BlockModelGen;
-import com.example.examplemod.util.AnnotationUtil;
+import io.github.ag6dev.annotationgeneration.generation.AnnotationGeneration;
+import io.github.ag6dev.annotationgeneration.generation.annotations.BlockModelGen;
+import io.github.ag6dev.annotationgeneration.util.AnnotationUtil;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -23,11 +23,6 @@ public class AnnotationBlockModelProvider extends BlockModelProvider {
                 case CUBE_SINGLE_TEXTURE -> cubeAll(fieldAnno.registryName(), modLoc(fieldAnno.texLoc()[0]));
                 case STAIRS -> stairs(fieldAnno.registryName(), modLoc(fieldAnno.texLoc()[0]), modLoc(fieldAnno.texLoc()[1]), modLoc(fieldAnno.texLoc()[2]));
             }
-
-            if (fieldAnno.generateBlockItemModels())
-                withExistingParent(modid + ":" + fieldAnno.registryName(), modLoc("block/" + fieldAnno.registryName()));
-
-
         });
     }
 }

@@ -1,8 +1,8 @@
-package com.example.examplemod.init;
+package io.github.ag6dev.annotationgeneration.init;
 
-import com.example.examplemod.generation.annotations.BlockModelGen;
-import com.example.examplemod.generation.annotations.ItemModelGen;
-import com.example.examplemod.generation.annotations.LanguageDataKey;
+import io.github.ag6dev.annotationgeneration.generation.annotations.BlockModelGen;
+import io.github.ag6dev.annotationgeneration.generation.annotations.ItemModelGen;
+import io.github.ag6dev.annotationgeneration.generation.annotations.LanguageDataKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -15,10 +15,10 @@ public class TestInit {
     public static final DeferredRegister<Item> TEST = DeferredRegister.create(ForgeRegistries.ITEMS, "examplemod");
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "examplemod");
 
-    @ItemModelGen(registryName = "examplemod:examplemod", type = ItemModelGen.ModelType.ITEM_GENERATED, textureLoc = "item/test")
+    @ItemModelGen(registryName = "examplemod", type = ItemModelGen.ModelType.ITEM_GENERATED, textureLoc = "item/test")
     @LanguageDataKey(key = "item.examplemod.examplemod", translation = "test item")
     public static final RegistryObject<Item> TEST_ITEM = TEST.register("examplemod", () -> new Item(new Item.Properties()));
 
-    @BlockModelGen(registryName = "exampleblock", modelType = BlockModelGen.ModelType.CUBE_SINGLE_TEXTURE, texLoc = {"item/test"})
+    @BlockModelGen(registryName = "exampleblock", modelType = BlockModelGen.ModelType.CUBE_SINGLE_TEXTURE, texLoc = {"item/test"}, generateBlockItemModels = true)
     public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("exampleblock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 }

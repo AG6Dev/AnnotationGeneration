@@ -1,4 +1,4 @@
-package com.example.examplemod.util;
+package io.github.ag6dev.annotationgeneration.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

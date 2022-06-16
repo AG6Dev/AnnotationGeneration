@@ -1,4 +1,4 @@
-package com.example.examplemod.generation;
+package io.github.ag6dev.annotationgeneration.generation;
 
 import java.util.Objects;
 import java.util.Set;

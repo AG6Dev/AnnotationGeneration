@@ -1,8 +1,8 @@
-package com.example.examplemod.generation;
+package io.github.ag6dev.annotationgeneration.generation;
 
-import com.example.examplemod.generation.provider.AnnotationBlockModelProvider;
-import com.example.examplemod.generation.provider.AnnotationItemModelProvider;
-import com.example.examplemod.generation.provider.AnnotationLanguageProvider;
+import io.github.ag6dev.annotationgeneration.generation.provider.AnnotationBlockModelProvider;
+import io.github.ag6dev.annotationgeneration.generation.provider.AnnotationItemModelProvider;
+import io.github.ag6dev.annotationgeneration.generation.provider.AnnotationLanguageProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;

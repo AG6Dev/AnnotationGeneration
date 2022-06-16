@@ -1,4 +1,4 @@
-package com.example.examplemod.generation.annotations;
+package io.github.ag6dev.annotationgeneration.generation.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

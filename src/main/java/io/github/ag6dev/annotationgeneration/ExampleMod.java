@@ -1,8 +1,8 @@
-package com.example.examplemod;
+package io.github.ag6dev.annotationgeneration;
 
-import com.example.examplemod.generation.AnnotationGeneration;
-import com.example.examplemod.init.TestInit;
 import com.mojang.logging.LogUtils;
+import io.github.ag6dev.annotationgeneration.generation.AnnotationGeneration;
+import io.github.ag6dev.annotationgeneration.init.TestInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
